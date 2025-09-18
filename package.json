@@ -1,0 +1,26 @@
+{
+  "name": "expense-tracker-pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AIndrajith/Expense-Tracker-PRO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AIndrajith/Expense-Tracker-PRO/issues"
+  },
+  "homepage": "https://github.com/AIndrajith/Expense-Tracker-PRO#readme",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.1",
+    "nodemon": "^3.1.10"
+  }
+}

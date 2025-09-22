@@ -21,6 +21,8 @@ const usersSchema = new mongoose.Schema({
         requried: [true, "Balance is required!"],
         default: 0
     }
+},{
+    timestamps: true,
 })
 
 

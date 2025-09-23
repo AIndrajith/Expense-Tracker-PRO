@@ -18,6 +18,7 @@ mongoose
 
 // Models initialization
 require("./models/users.models");
+require("./models/transactions.model");
 
 app.use(express.json());
 

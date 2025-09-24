@@ -20,6 +20,10 @@ const usersSchema = new mongoose.Schema({
         type: Number,
         requried: [true, "Balance is required!"],
         default: 0
+    },
+
+    reset_code: {
+        type: Number,
     }
 },{
     timestamps: true,

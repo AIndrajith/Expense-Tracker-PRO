@@ -17,7 +17,7 @@ const userDashboard = async (req, res) => {
     })
     .sort("createdAt")     // this is an acending order 
     // if you want to get decending order you can add minus(-) simbol at the front like this (-createdAt)
-    .limit(3);
+    .limit(5);
 
     res.status(200).json({
         status: "success",

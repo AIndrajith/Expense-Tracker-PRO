@@ -15,8 +15,6 @@ const deleteTransaction = async (req, res) => {
 
     if(!getTransactions) throw "Transaction not found!";
 
-    console.log(getTransactions);
-
     if(getTransactions.transaction_type === "income"){
         //income logic here
         await usersModel.updateOne(

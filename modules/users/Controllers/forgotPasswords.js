@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const nodemailer = require("nodemailer");
+const emailManager = require("../../../managers/emailManager");
 
 const forgotPassword = async (req, res) => {
     const usersModel = mongoose.model("users");
@@ -26,21 +26,7 @@ const forgotPassword = async (req, res) => {
         }
     );
 
-    var transport = nodemailer.createTransport({
-        host: "sandbox.smtp.mailtrap.io",
-        port: 2525,
-        auth: {
-            user: "85febdbd0571ad",
-            pass: "3796f300132056"
-        }
-    });
-
-    await transport.sendMail({
-        to: email,
-        from: "info@expensetracker.com",
-        text: "Your password reset code is "+ resetCode,
-        subject: "Reset your password! - Expense tracker PRO"
-    })
+    await emailManager(email, "Your password reset code is "+ resetCode, "Reset your password! - Expense tracker PRO")
 
     res.status(200).json({
         status: "Reset code sent to email successfully!",
